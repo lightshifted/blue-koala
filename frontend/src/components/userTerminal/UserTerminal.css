@@ -1,0 +1,73 @@
+.user__terminal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.input__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: none;
+    overflow: hidden;
+}
+
+.input__field {
+    flex-grow: 1;
+    font-family: "SF Mono", "Segoe UI Mono", monospace;
+    font-size: 14px;
+    line-height: 1;
+    color: #333333;
+    background-color: transparent;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    resize: none;
+    overflow: auto;
+}
+
+.input__field::placeholder {
+    color: #999999;
+}
+
+.input__field:focus {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.input__button {
+    font-family: "SF Pro Text", "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #0078d4;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.input__button:hover {
+    background-color: #005a9e;
+}
+
+.input__button:active {
+    background-color: #004578;
+}

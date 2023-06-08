@@ -1,0 +1,7 @@
+.title {
+    @apply text-3xl font-bold underline;
+  }
+
+  .background {
+    @apply bg-black text-green-500 min-h-screen flex items-center justify-center;
+  }
