@@ -29,8 +29,6 @@ const FileUpload = ({ setUploadStatus }) => {
     },
   };
 
-  // Fetch file summary from the backend
-
   return (
     <div className="bg-gradient-radial h-screen">
       <header>
@@ -44,8 +42,7 @@ const FileUpload = ({ setUploadStatus }) => {
         </p>
         <p className="ant-upload-text">Click or drag file to this area to upload</p>
         <p className="ant-upload-hint">
-          Strictly prohibited from uploading company data or other
-          banned files.
+        All uploaded files will be used for research purposes only.
         </p>
       </Upload.Dragger>
       </div>

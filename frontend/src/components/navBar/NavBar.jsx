@@ -6,15 +6,13 @@ const items = [
   {
     key: 'logo',
     type: 'logo',
-    label: 'APOLLO V1.1 🚀',
+    label: 'Apollo 🚀 Research Build',
     style: {
-      fontSize: '18px',
+      fontSize: '22px',
       fontWeight: 'bold',
-      marginTop: '13px',
-      display: 'flex',
-      alignItems: 'center',
+      marginTop: '3px',
+      marginBottom: '3px',
       color: '#001529',
-      fontFamily: 'Roboto',
     }
   },
 ];

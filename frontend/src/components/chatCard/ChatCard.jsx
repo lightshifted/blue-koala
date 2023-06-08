@@ -19,7 +19,7 @@ const ChatCard = () => {
       if (data.sender === 'bot') {
         if (data.type === 'start') {
           setStatus('Computing answer...');
-          setMessages((prevMessages) => [...prevMessages, { sender: 'bot', message: 'ContractQA: ' }]);
+          setMessages((prevMessages) => [...prevMessages, { sender: 'bot', message: 'Assistant: ' }]);
         } else if (data.type === 'stream') {
           setStatus('Chatbot is typing...');
           setMessages((prevMessages) => {
@@ -64,7 +64,7 @@ const ChatCard = () => {
       if (data.sender === 'bot') {
         if (data.type === 'start') {
           setStatus('Computing answer...');
-          setMessages((prevMessages) => [...prevMessages, { sender: 'bot', message: 'ContractQA: ' }]);
+          setMessages((prevMessages) => [...prevMessages, { sender: 'bot', message: 'Assistant: ' }]);
         } else if (data.type === 'stream') {
           setStatus('Chatbot is typing...');
           setMessages((prevMessages) => {
