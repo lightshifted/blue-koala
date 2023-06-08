@@ -1,57 +1,59 @@
-<p align="center">
-<h1 align="center">Apollo 🚀 Research Build</h1>
-</p>
+# Apollo 🚀 Research Build
+
+Apollo is a cutting-edge research build. This document provides comprehensive steps on how to set up and get started with this project.
 
 ## ⚙ Setup
-To get up and running, I install the dependency manager [Poetry](https://python-poetry.org/docs/):
+
+The setup process involves the following steps: 
+
+1. Install Dependency Manager (Poetry)
+2. Clone Repository
+3. Install Dependencies
+4. Launch APIs
+5. Launch Frontend
+
+### 1. Install Dependency Manager (Poetry)
+
+This project uses [Poetry](https://python-poetry.org/docs/) for managing dependencies. Here are the steps to install it:
 
 ```bash
+# Install Poetry
 curl -sSL https://install.python-poetry.org | python3 -
-```
 
-### Clone Repository
+# Verify the installation
+poetry --version
+```
+On successful installation, the second command should return `Poetry (version 1.4.2)` or higher.
+
+### 2. Clone Repository
+Next, clone the repository to your local system using the following command:
 
 ```bash
 git clone https://github.com/lightshifted/blue-koala
 ```
 
-### Install Poetry
-To install Poetry, I execute this command:
 
-```bash
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
-I then check my installation with:
-
-```bash
-poetry --version
-```
-
-### Install Dependencies
-To install dependencies, I execute this command from the `blue-koala/backend` directory:
+### 3. Install Dependencies
+Navigate to the `blue-koala/backend` directory and run the following command to install the required dependencies:
 
 ```bash
 poetry install
 ```
 
-### Start Stream
-To initialize streaming, I execute this command from the `blue-koala/backend` directory:
+
+
+### 4. Launch APIs
+Once the dependencies are installed, execute the following command from the root directory `blue-koala` to launch the API servers:
 
 ```bash
-poetry run uvicorn stream:app --reload --port 9000
+poetry run python execute_commands.py
 ```
 
-### Start API
-To initialize the API, I execute this command from the `blue-koala/backend/api` directory:
-
-```bash
-poetry run uvicorn app:app --reload --port 8000
-```
-
-### Start Frontend
-To start the client-side interface, I execute this command from the `blue-koala/frontend` directory:
+### 5. Launch Frontend
+To start the frontend interface, navigate to the `blue-koala/frontend` directory and run the following command:
 
 ```bash
 npm start
 ```
+
+That's it! Your Apollo Research Build is now up and running. Enjoy coding!
