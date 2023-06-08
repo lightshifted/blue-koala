@@ -30,7 +30,7 @@ app.add_middleware(
 )
 
 @app.post('/api/answer')
-async def answer(request: Request):
+async def answer(request: Request) -> JSONResponse:
     """
     Endpoint for answering a question.
 
@@ -41,7 +41,7 @@ async def answer(request: Request):
         JSONResponse: The answer to the question.
     """
     data = await request.json()
-    question = data["question"]
+    question: str = data["question"]
 
     # Get vectorstore
     vectorstore = get_vectorstore(db_dir="../client/chromadb")
@@ -63,7 +63,7 @@ async def answer(request: Request):
 
 
 @app.post('/api/ingest')
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(file: UploadFile = File(...)) -> JSONResponse:
     """
     Endpoint for uploading a file.
 
@@ -74,24 +74,24 @@ async def upload_file(file: UploadFile = File(...)):
         JSONResponse: A success message.
     """
     # Obtain the filename from the uploaded file
-    filename = file.filename
+    filename: str = file.filename
 
     if file:
         try:
             # Empty the source_docs directory
-            dir_path = "../client/docs/"
+            dir_path: str = "../client/docs/"
             for file_name in os.listdir(dir_path):
                 os.remove(os.path.join(dir_path, file_name))
         except IsADirectoryError:
             print("Directory is empty")
 
-        file_path = "../client/docs/doc.pdf"
+        file_path: str = "../client/docs/doc.pdf"
         with open(file_path, 'wb') as f:
             shutil.copyfileobj(file.file, f)
 
         # Saving filename to JSON object and store in client_data directory
         filename_dict = {'filename': filename, 'file-path': filename.replace(" ", "_").replace("(","").replace(")","")}
-        filename_path = "../client/filename/filename.json"
+        filename_path: str = "../client/filename/filename.json"
         with open(filename_path, 'w') as f:
             json.dump(filename_dict, f)
 

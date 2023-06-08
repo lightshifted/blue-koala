@@ -8,7 +8,7 @@ const DisplayMessages = () => {
     {
       id: 3,
       title: '⛔ Limitations',
-      content: "Apollo may generate incorrect or nonsensical responses and be sensitive to input phrasing. Exercise caution and independently verify critical information. Additionally, the research build may have limitations in terms of scalability, stability, feature completeness, security, user experience, platform compatibility, and available support and documentation."
+      content: "The research build may have limitations in terms of scalability, stability, feature completeness, security, user experience, platform compatibility, and available support and documentation."
     },
   ];
 

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Layout, Menu } from 'antd';
-import { UserOutlined } from '@ant-design/icons';
+import { Menu } from 'antd';
 
 const items = [
   {

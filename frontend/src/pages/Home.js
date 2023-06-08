@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ChatCard from '../components/chatCard/ChatCard';
 import FileUpload from '../components/fileUpload/FileUploadCard';
 

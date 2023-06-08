@@ -12,22 +12,44 @@ load_dotenv()
 
 
 def init_pinecone() -> None:
+    """
+    Initialize Pinecone.
+
+    Returns:
+        None
+    """
     pinecone.init()
     pinecone.whoami()
     return
 
 
-def create_index(index_name: str)-> None:
+def create_index(index_name: str) -> pinecone.Index:
+    """
+    Create a Pinecone index.
+
+    Parameters:
+        - index_name (str): The name of the index.
+
+    Returns:
+        pinecone.Index: The created index.
+    """
     pinecone.create_index(
-    name = index_name,
-    dimension = 1536,  # dimensionality of dense model
-    metric = "dotproduct",  # sparse values supported only for dotproduct
-    pod_type = "s1",
-    metadata_config={"indexed": []}
+        name=index_name,
+        dimension=1536,  # dimensionality of dense model
+        metric="dotproduct",  # sparse values supported only for dotproduct
+        pod_type="s1",
+        metadata_config={"indexed": []}
     )
     return pinecone.Index(index_name)
 
-def get_similarity():
+
+def get_similarity() -> PineconeHybridSearchRetriever:
+    """
+    Get the similarity retriever.
+
+    Returns:
+        PineconeHybridSearchRetriever: The similarity retriever.
+    """
     # init_pinecone() # Initialize Pinecone
     # index_name = "hybrid-search-index"
     # index = create_index(index_name)

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Upload, message, Button, Card } from 'antd';
+import React from 'react';
+import { Upload, message } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import Navbar from '../navBar/NavBar';
 import DisplayMessages from '../displayMessages/DisplayMessages';

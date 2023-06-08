@@ -40,13 +40,11 @@ Navigate to the `blue-koala/backend` directory and run the following command to 
 poetry install
 ```
 
-
-
 ### 4. Launch APIs
 Once the dependencies are installed, execute the following command from the root directory `blue-koala/backend` to launch the API servers:
 
 ```bash
-poetry run python execute_commands.py
+poetry run python boot_servers.py
 ```
 
 ### 5. Launch Frontend
