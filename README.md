@@ -3,7 +3,11 @@
 </p>
 
 ## ⚙ Setup
-To get up and running, execute these commands in the project's root directory:
+To get up and running, I install Poetry dependency manager:
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
 
 ### Clone Repository
 
