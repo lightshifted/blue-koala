@@ -3,11 +3,11 @@ import { Card } from 'antd';
 
 const DisplayMessages = () => {
   const messages = [
-    { id: 1, title: 'Welcome', content: "Amplify your legal understanding with ContractQA. Seamlessly comprehend complex legal contracts and safeguard your position in a just and prosperous society. By simplifying legal contract details into a readily available and intuitive format, we're enabling individuals to comprehend their entitlements and effectively advocate for themselves."},
+    { id: 1, title: '🎛 Research Build', content: "This build's purpose is to demonstrate integration of OpenAI API's streaming feature with React frontend. Upload a PDF above to get started."},
     { id: 2, title: 'System Update', content: 'We have made some improvements to our system.' },
     {
       id: 3,
-      title: 'Limitations',
+      title: '⛔ Limitations',
       content: "Apollo may generate incorrect or nonsensical responses and be sensitive to input phrasing. Exercise caution and independently verify critical information. Additionally, the research build may have limitations in terms of scalability, stability, feature completeness, security, user experience, platform compatibility, and available support and documentation."
     },
   ];
